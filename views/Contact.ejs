@@ -1,0 +1,80 @@
+<%-include partials/header.ejs%>
+<%-include partials/main_nav.ejs%>
+  
+<style>
+    .GFG {
+        background-color: white;
+        border: 2px solid black;
+        color: green;
+        padding: 5px 10px;
+        text-align: center;
+        display: inline-block;
+        font-size: 20px;
+        margin: 10px 30px;
+        cursor: pointer;
+        text-decoration:none;
+    }
+    .newform{
+        border-width: 4px;
+        border-style: solid;
+        border-image: linear-gradient(to right, darkblue, darkorchid) 1;
+        margin: 0px 450px 0px 450px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 15px;
+        padding-bottom: 5px;;
+    }
+    .common{
+        background-color: #CBC3E3;
+        text-align: center;
+    }
+</style>
+ <body class="common">
+  <h1><%= title %></h1>
+   <p>Welcome to <%= title %></p>
+<h2>Contact us using the following details: </h2>
+<div style="padding-top: 20px;">
+   <table align="center">
+       <tr>
+           <td>Contact number:</td>
+           <td>+1(647)607-7041</td>
+       </tr>
+       <tr>
+           <td>Address</td>
+           <td>921 progress Ave. </td>
+       </tr>
+       <tr>
+           <td>Linkedln </td>
+           <td>@abcd34</td>
+       </tr>
+       <tr>
+           <td>Email Id</td>
+           <td>ppate783@my.centennialcollege.ca</td>
+       </tr>
+   </table>
+   <form method="get" class="newform">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="Panth"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" placeholder="Patel"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="abc@email.com"><br>
+    <label for="telephone">Telephone:</label><br>
+    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="888-888-8888"><br>
+    <label for="services">Choose a service:</label><br>
+    <select id="service" name="service">
+        <option value="" selected disabled hidden>Choose service...</option>
+        <option value="programming">Programming</option>
+        <option value="webdesign">Web design</option>
+        <option value="databasemanagement">Database Management</option>
+    </select><br><br>
+    <a href="/home" class="GFG">Submit</a>
+    
+    
+    <input type="reset" class="GFG">
+  </form>
+  <br><br><br>
+</div>
+   <%-include partials/bottom_nav.ejs%>
+<%-include partials/footer.ejs%>   
+</body>
